@@ -10,8 +10,10 @@ The files in this repository are copyright of Meizu, Unisoc and their licensors.
 
 | Path | Content |
 |---|---|
-| `images/` | stock `boot`, `vendor_boot`, `dtbo` (AVB footer erased), stock `vendor`, `odm`, `vendor_dlkm`, `system_dlkm` |
-| `images.sha256` | SHA-256 of every image |
+| `images/` | stock `boot`, `dtbo` (AVB footer erased), stock `vendor`, `odm`, `vendor_dlkm`, `system_dlkm` |
+| `dtb/` | DTB from the stock `vendor_boot` |
+| `vendor_ramdisk/` | first-stage kernel modules with their load lists, first-stage fstabs and ueventd rules from the stock `vendor_boot` ramdisk |
+| `images.sha256`, `dtb.sha256`, `vendor_ramdisk.sha256` | SHA-256 of every file above |
 | `avb/unisoc_modem.avbpubkey` | public key the stock `vbmeta` uses for the chained modem/DSP partitions |
 
 `images/vendor.img` (765,497,344 bytes) exceeds the GitHub file size limit. It is published as `vendor.img.xz` on the `images-U01005` release; `fetch-images.sh` downloads it and verifies every image.
