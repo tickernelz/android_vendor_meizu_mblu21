@@ -15,3 +15,5 @@ if [ ! -f vendor.img ]; then
     xz -d -f vendor.img.xz
 fi
 sha256sum -c ../images.sha256
+cd "${MY_DIR}/radio"
+sha256sum -c ../radio.sha256
