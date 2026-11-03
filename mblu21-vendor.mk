@@ -8,6 +8,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     UnisocIms \
+    UnisocRadioInteractor \
     ims_bridged \
     srmi_proxyd
 

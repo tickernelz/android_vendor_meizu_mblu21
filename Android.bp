@@ -13,6 +13,17 @@ android_app_import {
     required: ["privapp_whitelist_com.spreadtrum.ims"],
 }
 
+android_app_import {
+    name: "UnisocRadioInteractor",
+    apk: "proprietary/system_ext/priv-app/radio_interactor_service/radio_interactor_service.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+}
+
 prebuilt_etc {
     name: "privapp_whitelist_com.spreadtrum.ims",
     src: "proprietary/system_ext/etc/permissions/com.spreadtrum.ims.xml",
