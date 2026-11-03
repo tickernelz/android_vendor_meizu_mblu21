@@ -1,2 +1,65 @@
 soong_namespace {
 }
+
+android_app_import {
+    name: "UnisocIms",
+    apk: "proprietary/system_ext/priv-app/ims/ims.apk",
+    certificate: "platform",
+    privileged: true,
+    system_ext_specific: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    required: ["privapp_whitelist_com.spreadtrum.ims"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.spreadtrum.ims",
+    src: "proprietary/system_ext/etc/permissions/com.spreadtrum.ims.xml",
+    filename: "com.spreadtrum.ims.xml",
+    sub_dir: "permissions",
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimsbrd",
+    target: {
+        android_arm: {
+            srcs: ["proprietary/system_ext/lib/libimsbrd.so"],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system_ext/lib64/libimsbrd.so"],
+        },
+    },
+    compile_multilib: "both",
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "liblog",
+        "libnetlink",
+        "libnetutils",
+    ],
+    strip: {
+        none: true,
+    },
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "ims_bridged",
+    srcs: ["proprietary/system_ext/bin/ims_bridged"],
+    compile_multilib: "64",
+    init_rc: ["proprietary/system_ext/etc/init/ims_bridged.rc"],
+    shared_libs: [
+        "libc++",
+        "libcutils",
+        "libimsbrd",
+        "liblog",
+        "libnetutils",
+        "libnl",
+    ],
+    strip: {
+        none: true,
+    },
+    system_ext_specific: true,
+}
