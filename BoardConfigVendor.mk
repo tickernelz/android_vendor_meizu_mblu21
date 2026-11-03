@@ -1,5 +1,3 @@
 #
-# SPDX-FileCopyrightText: 2026 The LineageOS Project
-# SPDX-License-Identifier: Apache-2.0
+# Automatically generated file. DO NOT MODIFY
 #
-
