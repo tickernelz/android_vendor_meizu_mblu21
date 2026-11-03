@@ -4,7 +4,7 @@ Stock images and proprietary files used by [android_device_meizu_mblu21](https:/
 
 ## Disclaimer
 
-The files in this repository are copyright of Meizu, Unisoc and their licensors. They were extracted unmodified from stock firmware `U01005` (`meizu/meizu_mblu/MEIZU_mblu:14/U01005/1745906188:user/release-keys`) of a device owned by the publisher, and are published only so that the device can be restored and run with LineageOS. No license is granted by this repository. Rights holders who want a file removed can open an issue.
+The files in this repository are copyright of Meizu, Unisoc and their licensors. They were extracted unmodified from stock firmware `U01005` (`meizu/meizu_mblu/MEIZU_mblu:14/U01005/1745906188:user/release-keys`) of a device owned by the publisher, and are published only so that LineageOS can be built for the device. Stock images for restoring the phone are in [android_stock_meizu_mblu21](https://github.com/tickernelz/android_stock_meizu_mblu21/releases). No license is granted by this repository. Rights holders who want a file removed can open an issue.
 
 ## Contents
 
