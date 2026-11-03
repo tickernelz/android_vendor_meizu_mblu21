@@ -8,7 +8,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_PACKAGES += \
     UnisocIms \
-    ims_bridged
+    ims_bridged \
+    srmi_proxyd
 
 PRODUCT_COPY_FILES += \
     vendor/meizu/mblu21/images/kernel:kernel \
