@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     libsrmi \
     libsrmiservice \
     vendor.unisoc.frameworks.srmi-V1-ndk \
+    CarrierServices \
     ims \
     radio_interactor_service \
     ims_bridged \
